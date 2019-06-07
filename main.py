@@ -5,7 +5,6 @@ from ttk import Frame, Label
 from fuzzy import *
 from wordSegmentation import wordSegmentation, prepareImg
 import configparser
-import csv
 import cv2
 import tempfile
 IMAGE_SIZE = 1800
@@ -63,7 +62,7 @@ def rasim(*w,**kw):
             self.initUI()
 
         def initUI(self):
-            self.parent.title("Eski uzbek yozuvi tanish")
+            self.parent.title("Uzbek yozuvi tanish")
             self.pack(fill=BOTH, expand=True)
             self.columnconfigure(1, weight=1)
             self.columnconfigure(3, pad=7)
@@ -107,7 +106,7 @@ def segment(*w,**kw):
             self.initUI()
 
         def initUI(self):
-            self.parent.title("Eski uzbek yozuvi tanish")
+            self.parent.title("Uzbek yozuvi tanish")
             self.pack(fill=BOTH, expand=True)
             self.columnconfigure(1, weight=1)
             self.columnconfigure(3, pad=7)
@@ -164,7 +163,7 @@ def fuzzy_conf(*w,**kw):
             self.initUI()
 
         def initUI(self):
-            self.parent.title("Eski uzbek yozuvi tanish")
+            self.parent.title("Uzbek yozuvi tanish")
             self.pack(fill=BOTH, expand=True)
             self.columnconfigure(1, weight=1)
             self.columnconfigure(3, pad=7)
@@ -257,7 +256,7 @@ def change_model():
                 self.initUI()
 
             def initUI(self):
-                self.parent.title("Eski uzbek yozuvi tanish")
+                self.parent.title("Uzbek yozuvi tanish")
                 self.pack(fill=BOTH, expand=True)
                 self.columnconfigure(1, weight=1)
                 self.columnconfigure(3, pad=7)
@@ -351,7 +350,7 @@ def segmentatsiya(label1,lbl):
             (x, y, w, h) = wordBox
             cv2.imwrite('tmp/%d.png' % (j), wordImg)
             words.append({'image':'tmp/%d.png'% (j),'x':x,'y':y})
-            #cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0))
+            cv2.rectangle(img, (x, y), (x + w, y + h), (0,0,0))
         cv2.imwrite('tmp/segmented.jpg',img)
         img = Image.fromarray(img)
         img = img.resize((int(config['rasim']['h']), int(config['rasim']['w'])), Image.ANTIALIAS)
@@ -414,7 +413,7 @@ class Main(Frame):
         self.parent = parent
         self.initUI()
     def initUI(self):
-        self.parent.title("Eski uzbek yozuvi tanish")
+        self.parent.title("Uzbek yozuvi tanish")
         self.pack(fill=BOTH, expand=True)
 
         self.columnconfigure(1, weight=1)
