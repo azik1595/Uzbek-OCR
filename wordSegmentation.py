@@ -83,13 +83,6 @@ def createKernel(kernelSize, sigma, theta):
     kernel = kernel / np.sum(kernel)
     return kernel
 
-ASPECT_UPPER = 0.65
-ASPECT_LOWER = 0.2
-SOLIDITY_UPPER = 0
-SOLIDITY_LOWER = 0.02
-HEIGHT_UPPER = 0.88
-HEIGHT_LOWER = 0.3
-
 
 def plate_segmentation(plate_image):
     plate = cv2.imread(plate_image)
@@ -129,31 +122,9 @@ def plate_segmentation(plate_image):
             # grab the largest contour which corresponds to the component in the mask, then
             # grab the bounding box for the contour
             c = max(cnts, key=cv2.contourArea)
-            (boxX, boxY, boxW, boxH) = cv2.boundingRect(c)
-
-            # compute the aspect ratio, solidity, and height ratio for the component
-            aspectRatio = boxW / float(boxH)
-            heightRatio = boxH / float(plate.shape[0])
-            solidity = cv2.contourArea(c) / float(boxW * boxH)
-
-            # print("aspectRatio: " + str(aspectRatio))
-            # print("heightRatio: " + str(heightRatio))
-            # print("solidity: " + str(solidity))
-            # print("===================================")
-
-            # determine if the aspect ratio, solidity, and height of the contour pass
-            # the rules tests
-            keepAspectRatio = ASPECT_LOWER < aspectRatio < ASPECT_UPPER
-            keepSolidity = SOLIDITY_LOWER < solidity
-            keepHeight = HEIGHT_LOWER < heightRatio < HEIGHT_UPPER
-
-            # check to see if the component passes all the tests
-            if True:
-                # compute the convex hull of the contour and draw it on the character
-                # candidates mask
-                hull = cv2.convexHull(c)
-                cv2.drawContours(charCandidates, [hull], -1, 255, -1)
-                count += 1
+            hull = cv2.convexHull(c)
+            cv2.drawContours(charCandidates, [hull], -1, 255, -1)
+            count += 1
 
     # cv2.imshow("charCandidates", charCandidates)
     # cv2.waitKey(0)
@@ -192,35 +163,10 @@ def plate_segmentation(plate_image):
 
             # ensure at least one contour was found in the mask
             if len(cnts) > 0:
-                # grab the largest contour which corresponds to the component in the mask, then
-                # grab the bounding box for the contour
                 c = max(cnts, key=cv2.contourArea)
-                (boxX, boxY, boxW, boxH) = cv2.boundingRect(c)
-
-                # compute the aspect ratio, solidity, and height ratio for the component
-                aspectRatio = boxW / float(boxH)
-                heightRatio = boxH / float(plate.shape[0])
-                solidity = cv2.contourArea(c) / float(boxW * boxH)
-
-                # print("aspectRatio: " + str(aspectRatio))
-                # print("heightRatio: " + str(heightRatio))
-                # print("solidity: " + str(solidity))
-                # print("===================================")
-
-                # determine if the aspect ratio, solidity, and height of the contour pass
-                # the rules tests
-                keepAspectRatio = ASPECT_LOWER < aspectRatio < ASPECT_UPPER
-                keepSolidity = SOLIDITY_LOWER < solidity
-                keepHeight = HEIGHT_LOWER < heightRatio < HEIGHT_UPPER
-
-                # check to see if the component passes all the tests
-                if True\
-                        :
-                    # compute the convex hull of the contour and draw it on the character
-                    # candidates mask
-                    hull = cv2.convexHull(c)
-                    cv2.drawContours(charCandidates, [hull], -1, 255, -1)
-                    count += 1
+                hull = cv2.convexHull(c)
+                cv2.drawContours(charCandidates, [hull], -1, 255, -1)
+                count += 1
 
         # cv2.imshow("charCandidates", charCandidates)
         # cv2.waitKey(0)
