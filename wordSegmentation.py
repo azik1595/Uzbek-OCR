@@ -88,11 +88,12 @@ def plate_segmentation(plate_image):
     plate = cv2.imread(plate_image)
     gray_plate = cv2.cvtColor(plate,cv2.COLOR_BGR2GRAY)
     # Transform plate to binary
-    # ret, threshold = cv2.threshold(gray_plate, 90, 255, cv2.THRESH_BINARY_INV)
-
-    threshold = cv2.adaptiveThreshold(gray_plate, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 125, 35)
-    # cv2.imshow("Thresh Binary Inverse", threshold)
+    #ret, threshold = cv2.threshold(gray_plate, 90, 255, cv2.THRESH_BINARY_INV)
+    # cv2.imshow('asd',gray_plate)
     # cv2.waitKey(0)
+    threshold = cv2.adaptiveThreshold(gray_plate, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 21, 20)
+    cv2.imshow("Thresh Binary Inverse", threshold)
+    cv2.waitKey(0)
 
     # Find connecting regions of threshold regions
     connecting_regions = measure.label(threshold, neighbors=8, background=0)
@@ -112,8 +113,8 @@ def plate_segmentation(plate_image):
         regionMask[connecting_regions == region] = 255
         cnts = cv2.findContours(regionMask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        cv2.imshow("label", regionMask)
-        cv2.waitKey(0)
+        # cv2.imshow("label", regionMask)
+        # cv2.waitKey(0)
 
         cnts = cnts[1]
 
@@ -135,8 +136,8 @@ def plate_segmentation(plate_image):
         print("Using enhance algorithm")
 
         threshold = threshold_plate_enhance(plate_image)
-        # cv2.imshow("Thresh Binary Inverse Enhance", threshold)
-        # cv2.waitKey(0)
+        cv2.imshow("Thresh Binary Inverse Enhance", threshold)
+        cv2.waitKey(0)
 
         # Find connecting regions of threshold regions
         connecting_regions = measure.label(threshold, neighbors=8, background=0)
@@ -156,8 +157,8 @@ def plate_segmentation(plate_image):
             regionMask[connecting_regions == region] = 255
             cnts = cv2.findContours(regionMask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-            # cv2.imshow("label", regionMask)
-            # cv2.waitKey(0)
+            cv2.imshow("label", regionMask)
+            cv2.waitKey(0)
 
             cnts = cnts[1]
 

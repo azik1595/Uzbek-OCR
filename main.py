@@ -98,6 +98,8 @@ def remove_noise_and_smooth(file_name):
     opening = cv2.morphologyEx(filtered, cv2.MORPH_OPEN, kernel)
     closing = cv2.morphologyEx(opening, cv2.MORPH_CLOSE, kernel)
     img = image_smoothening(img)
+    kernel = np.ones((1, 1), np.uint8)
+    img = cv2.erode(img, kernel, iterations=1)
     or_image = cv2.bitwise_or(img, closing)
     return or_image
 
@@ -375,7 +377,9 @@ def open_img(label1,lbl):
 
 def fuzzy(label1,lbl):
     fuzzy_filter(filename,config)
+
     image = process_image_for_ocr('tmp\prep.jpg')
+
     cv2.imwrite('tmp\prep2.jpg',image)
     img =  Image.fromarray(image)
     img = img.resize((int(config['rasim']['h']), int(config['rasim']['w'])), Image.ANTIALIAS)
