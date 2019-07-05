@@ -6,6 +6,14 @@ from skimage import measure
 from skimage import segmentation
 
 
+def ratio(img):
+    """Getting scale ratio."""
+    return img.shape[0]
+
+def get_contour_precedence(contour, cols):
+    tolerance_factor = 100
+    origin = cv2.boundingRect(contour)
+    return ((origin[1] // tolerance_factor) * tolerance_factor) * cols + origin[0]
 def wordSegmentation(img, kernelSize=25, sigma=11, theta=7, minArea=20):
     """Scale space technique for word segmentation proposed by R. Manmatha: http://ciir.cs.umass.edu/pubfiles/mm-27.pdf
 
@@ -34,6 +42,7 @@ def wordSegmentation(img, kernelSize=25, sigma=11, theta=7, minArea=20):
 
     # append components to result
     res = []
+    bboxes = []
     for c in components:
         # skip small word candidates
         if cv2.contourArea(c) < minArea:
@@ -41,14 +50,26 @@ def wordSegmentation(img, kernelSize=25, sigma=11, theta=7, minArea=20):
         # append bounding box and image of word to result list
         currBox = cv2.boundingRect(c)  # returns (x, y, w, h)
         (x, y, w, h) = currBox
+        bboxes += [[x, y, w, h]]
         currImg = img[y:y + h, x:x + w]
         res.append((currBox, currImg))
+    bounding_boxes = np.array([0, 0, 0, 0])
+    for (x, y, w, h) in bboxes:
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        bounding_boxes = np.vstack((bounding_boxes,
+                                    np.array([x, y, x + w, y + h])))
+    boxes = bounding_boxes.astype(np.int64)#.dot(ratio(img)).astype(np.int64)
+    max_width = img.shape[1]
+    max_height = img.shape[0]
+    nearest = max_height * 50
 
     # return list of words, sorted by x-coordinate
     #key = lambda ctr: cv2.boundingRect(ctr)[0] + cv2.boundingRect(ctr)[1]
-    #return sorted(res, key=lambda entry: entry[0][1] )
-    return  sorted(res,key= lambda l:l[0][1])
-
+   # return sorted(res, key=lambda entry: entry[0] )
+    #return  sorted(res,key= lambda l:l[0][0])
+    #return sorted(res,key=lambda x:get_contour_precedence(x[1], img.shape[1]))
+    #return sorted(res,key=lambda r: (int(nearest * round(float(r[0][1])/nearest)) * max_width + r[0][1]))
+    return boxes[1:]
 
 def prepareImg(img, height):
     """convert given image to grayscale image (if needed) and resize to desired height"""
@@ -255,5 +276,43 @@ def scissor(plate_image):
 
     return chars
 
+def sort_res(img,res):
+    res_sorted = []
+    # i= y
+    # j= x
+    for i in range(img.shape[0]):
+     for j in range(img.shape[1]):
+         res= sorted(res,key= lambda l:l[0][0])
+         for  k,w in enumerate(res):
+             (wordBox, wordImg) = w
+             (x, y, w, h) = wordBox
+             if (i<=(y+h))&(i>=(y-h)):
+                #  if (i+j-x-y)>h:
+                if (j<=(x+w))&(j>=(x-w)) :
+                     print(i,j,x,y)
+                     res_sorted.append((wordBox, wordImg))
+
+                     del res[k]
+    return res_sorted
 
 
+def sort_words(boxes):
+    """Sort boxes - (x, y, x+w, y+h) from left to right, top to bottom."""
+    mean_height = sum([y2 - y1 for _, y1, _, y2 in boxes]) / len(boxes)
+    boxes.view('i8,i8,i8,i8').sort(order=['f1'], axis=0)
+    current_line = boxes[0][1]
+    lines = []
+    tmp_line = []
+    for box in boxes:
+        if box[1] > current_line + mean_height:
+            lines.append(tmp_line)
+            tmp_line = [box]
+            current_line = box[1]
+            continue
+        tmp_line.append(box)
+    lines.append(tmp_line)
+
+    for line in lines:
+        line.sort(key=lambda box: box[0])
+
+    return lines

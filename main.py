@@ -3,69 +3,35 @@ from PIL import ImageTk, Image
 from tkinter import filedialog,messagebox
 from ttk import Frame, Label
 from fuzzy import *
-from wordSegmentation import wordSegmentation, segmentation
+from wordSegmentation import wordSegmentation, sort_res,sort_words
+from ocr.words import detection
 import configparser
 import cv2
 import tempfile
 import numpy as np
+import os
+from NN_src.DataLoader_orig import DataLoader, Batch
+from NN_src.Model import Model, DecoderType
+from NN_src.SamplePreprocessor import preprocess
+from NN_src.main import infer
+decoderType = DecoderType.BeamSearch
+model = Model(open('model/charList.txt').read(), decoderType, mustRestore=True,)
 
-classification = np.loadtxt("classifications.txt", np.float32)
-flattened_image_features = np.loadtxt("flattenedImageFeatures.txt", np.float32)
-
-# Reshape
-classification = classification.reshape((classification.size, 1))
-
-# KNN Training
-kNearest = cv2.ml.KNearest_create()
-print(cv2.ml.ROW_SAMPLE)
-kNearest.train(flattened_image_features, cv2.ml.ROW_SAMPLE, classification)
-def recognition(charCandidate, charThreshold):
-    # Find Contours
-    cnts = cv2.findContours(charCandidate.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    cnts = cnts[1]
-
-    boxes = []
-    # Get all boxes
-    for c in cnts:
-        (boxX, boxY, boxW, boxH) = cv2.boundingRect(c)
-        boxes.append(((boxX, boxY, boxX + boxW, boxY + boxH)))
-
-    # Order boxes from left to right
-    boxes = sorted(boxes, key=lambda b: b[0])
-
-    # Initialize Thresholds
-    resize_w = 20
-    resize_h = 30
-
-    plate_number = ""
-
-    for (startX, startY, endX, endY) in boxes:
-        current_char = charThreshold[startY:endY, startX:endX]
-        cv2.imshow("character", current_char)
-        cv2.waitKey(0)
-
-        cur_char_resize = cv2.resize(current_char, (resize_w, resize_h))
-        cur_char_reshape = cur_char_resize.reshape((1, resize_w * resize_h))
-        cur_feature = np.float32(cur_char_reshape)
-
-        _, result, _, _ = kNearest.findNearest(cur_feature, k=1)
-
-        plate_char = str(chr(int(result[0][0])))
-        plate_number += plate_char
-
-    print("Detection Completed:")
-    print(plate_number)
-
-    return plate_number
 IMAGE_SIZE = 1800
 BINARY_THREHOLD = 180
 
 config = configparser.ConfigParser()
 config.read('conf.ini')
-
-
+for file in os.scandir('tmp/'):
+    if file.name.endswith(".png"):
+        os.remove(file.path)
+# if os.path.exists('tmp/'):
+#     os.remove('tmp/')
+#     os.mkdir('tmp/')
+# else:
+#     os.mkdir('tmp/')
 def process_image_for_ocr(file_path):
-    #temp_filename = set_image_dpi(file_path)
+#    temp_filename = set_image_dpi(file_path)
     im_new = remove_noise_and_smooth(file_path)
     return im_new
 
@@ -98,8 +64,6 @@ def remove_noise_and_smooth(file_name):
     opening = cv2.morphologyEx(filtered, cv2.MORPH_OPEN, kernel)
     closing = cv2.morphologyEx(opening, cv2.MORPH_CLOSE, kernel)
     img = image_smoothening(img)
-    kernel = np.ones((1, 1), np.uint8)
-    img = cv2.erode(img, kernel, iterations=1)
     or_image = cv2.bitwise_or(img, closing)
     return or_image
 
@@ -377,9 +341,7 @@ def open_img(label1,lbl):
 
 def fuzzy(label1,lbl):
     fuzzy_filter(filename,config)
-
     image = process_image_for_ocr('tmp\prep.jpg')
-
     cv2.imwrite('tmp\prep2.jpg',image)
     img =  Image.fromarray(image)
     img = img.resize((int(config['rasim']['h']), int(config['rasim']['w'])), Image.ANTIALIAS)
@@ -387,25 +349,67 @@ def fuzzy(label1,lbl):
     label1.configure(image=img)
     label1.image = img
     lbl.configure(text="Siz fuzzy algoritmini bajrdingiz")
+from ocr.normalization import word_normalization, letter_normalization
+from ocr.tfhelpers import Model
+from ocr.datahelpers import idx2char
+MODEL_LOC_CTC = 'C:\\Users\\1\\Desktop\\handwriting-ocr-master\\models\\word-clas\\en\\CTC\\Classifier2'
+CTC_MODEL = Model(MODEL_LOC_CTC, 'word_prediction')
 
+def recognise(img):
+    """Recognising words using CTC Model."""
+    img = word_normalization(
+        img,
+        64,
+        border=False,
+        tilt=False,
+        hyst_norm=True)
+    length = img.shape[1]
+    # Input has shape [batch_size, height, width, 1]
+    input_imgs = np.zeros(
+            (1, 64, length, 1), dtype=np.uint8)
+    input_imgs[0][:, :length, 0] = img
+
+    pred = CTC_MODEL.eval_feed({
+        'inputs:0': input_imgs,
+        'inputs_length:0': [length],
+        'keep_prob:0': 1})#[0]
+
+    word = ''
+    for i in pred:
+        word += idx2char(i)
+    return word
 def segmentatsiya(label1,lbl):
         img = cv2.imread('tmp/prep2.jpg')
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         #prepareImg(cv2.imread('tmp/prep2.jpg'), 500)
        # cv2.imwrite('tmp/seg')
+        #res = detection(img)
         res = wordSegmentation(img,
                                kernelSize=int(config['segment']['kernelSize']),
                                sigma =int(config['segment']['sigma']),
                                theta=int(config['segment']['teta']),
                                minArea=int(config['segment']['minArea']))
         print('Segmented into %d words' % len(res))
-        for (j, w) in enumerate(res):
-            (wordBox, wordImg) = w
-            (x, y, w, h) = wordBox
-            cv2.imwrite('tmp/%d.png' % (j), wordImg)
-            words.append({'image':'tmp/%d.png'% (j),'x':x,'y':y})
-            cv2.rectangle(img, (x, y), (x + w, y + h), (0,0,0))
+
+        lines =sort_words(res)
+        n =0
+        for line in lines:
+            for l in line:
+                (x1, y1, x2, y2) = l
+                print(l)
+                cv2.imwrite('tmp/' + str(n) + '.png', img[y1:y2, x1:x2])
+                words.append({'image': 'tmp/%d.png' % (n)})
+                cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 0))
+                n+=1
         cv2.imwrite('tmp/segmented.jpg',img)
+        # for (j, w) in enumerate(res):
+        #     (wordBox, wordImg) = w
+        #     (x, y, w, h) = wordBox
+        #     cv2.imwrite('tmp/%d.png' % (j), wordImg)
+        #
+        #     cv2.rectangle(img, (x, y), (x + w, y + h), (0,0,0))
+        #     #cv2.putText(img, str(j), wordBox[:2], cv2.FONT_HERSHEY_COMPLEX, 1,(0, 0 , 0))
+        # cv2.imwrite('tmp/segmented.jpg',img)
         img = Image.fromarray(img)
         img = img.resize((int(config['rasim']['h']), int(config['rasim']['w'])), Image.ANTIALIAS)
         img = ImageTk.PhotoImage(img)
@@ -413,51 +417,31 @@ def segmentatsiya(label1,lbl):
         label1.image = img
         lbl.configure(text="Siz rasimdagi suzlarni segmentatsiya qildingiz")
 def tanish(label,lbl):
-    pass
-     # img = cv2.imread('tmp/tmp.png')
-     # tests_set =[]
-     # for w in words:
-     #   tests_set.append(w['image'])
-     # output = estimator.predict(input_fn(tests_set, mode=tf.estimator.ModeKeys.PREDICT),
-     #                       checkpoint_path=LOG_DIR + 'model.'+config['model']['path'].split('.')[1])
-     # global result_string
-     # result_string = ''
-     # for i,out in enumerate(output):
-     #    if float(out['probabilities'])>0.20:
-     #     text  =out['prediction']
-     #     word = words[i]
-     #     result_string=result_string+' '+words_dict[str(text)]
-     #     cv2.putText(img,words_dict[str(text)], (int(word['x']), int(word['y'])), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2,
-     #                 cv2.LINE_AA)
-     #
-     # cv2.imwrite('tmp/seg.jpg', img)
-     # img = Image.fromarray(img)
-     # img = ImageTk.PhotoImage(img)
-     # label.configure(image=img)
-     # label.image = img
-     # lbl.configure(text="Siz rasimdagi suzlarni aniqladingiz")
+     im = Image.open("tmp/prep2.jpg")
+     root = Toplevel()
+     text1 = Text(root, height=20, width=30)
+     image = Image.open("tmp/segmented.jpg")
+     image = image.resize((300, 200), Image.ANTIALIAS)
+     photo = ImageTk.PhotoImage(image,size=(20,30))
+     text1.insert(END, '')
+     text1.image_create(END, image=photo)
+     text1.pack(side=LEFT)
+     result = ''
+     for w in words:
+      txt= infer(model, w['image'])
+      result+=' '+txt
 
-     # root = Toplevel()
-     # text1 = Text(root, height=20, width=30)
-     # image = Image.open("tmp/seg.jpg")
-     # image = image.resize((300, 200), Image.ANTIALIAS)
-     # photo = ImageTk.PhotoImage(image,size=(20,30))
-     # text1.insert(END, '\n')
-     # text1.image_create(END, image=photo)
-     #
-     # text1.pack(side=LEFT)
-     #
-     # text2 = Text(root, height=20, width=50)
-     # scroll = Scrollbar(root, command=text2.yview)
-     # text2.configure(yscrollcommand=scroll.set)
-     # text2.tag_configure('bold_italics', font=('Arial', 12, 'bold', 'italic'))
-     # text2.tag_configure('big', font=('Verdana', 20, 'bold'))
-     # text2.tag_configure('color', foreground='#476042',
-     #                     font=('Tempus Sans ITC', 12, 'bold'))
-     # text2.insert(END, result_string, 'color')
-     # text2.pack(side=LEFT)
-     # scroll.pack(side=RIGHT, fill=Y)
-     # root.mainloop()
+     text2 = Text(root, height=20, width=50)
+     scroll = Scrollbar(root, command=text2.yview)
+     text2.configure(yscrollcommand=scroll.set)
+     text2.tag_configure('bold_italics', font=('Arial', 12, 'bold', 'italic'))
+     text2.tag_configure('big', font=('Verdana', 20, 'bold'))
+     text2.tag_configure('color', foreground='#476042',
+                         font=('Tempus Sans ITC', 12, 'bold'))
+     text2.insert(END, result, 'color')
+     text2.pack(side=LEFT)
+     scroll.pack(side=RIGHT, fill=Y)
+     root.mainloop()
 
 
 

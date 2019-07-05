@@ -1,15 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="597c1bf9-ca7d-49a5-a96a-ee887fbdafc3" name="Default" comment="Test">
-      <change afterPath="$PROJECT_DIR$/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classifications.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crop_morphology.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flattenedImageFeatures.txt" afterDir="false" />
+    <list default="true" id="597c1bf9-ca7d-49a5-a96a-ee887fbdafc3" name="Default" comment="line">
+      <change afterPath="$PROJECT_DIR$/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/DataLoader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/DataLoader_colab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/DataLoader_orig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/Model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/SamplePreprocessor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/analyze.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NN_src/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/accuracy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/charList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/model.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-3.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-3.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-38.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-38.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-38.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-6.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-6.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/snapshot-6.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/wordCharList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/accuracy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/charList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/checkpoint" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/snapshot-2.data-00000-of-00001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/snapshot-2.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/snapshot-2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_old/wordCharList.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/characters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/datahelpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/dataiterator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/imgtransform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/mlhelpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/normalization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/tfhelpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/viz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ocr/words.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cyrclic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cyrclic.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifications.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crop_morphology.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cyc1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cyc2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flattenedImageFeatures.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/108.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/121.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/124.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/125.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/133.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/138.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/141.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/142.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/143.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/146.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/147.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/149.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/154.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/157.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/158.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/161.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/78.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/79.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/80.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/81.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/82.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/83.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/84.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/85.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/86.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/87.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/89.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/91.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/92.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/93.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/94.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/95.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/97.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/98.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/prep.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/prep.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/prep2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/prep2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/segmented.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/segmented.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wordSegmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordSegmentation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,69 +234,101 @@
     <SUITE FILE_PATH="coverage/cyrclic$main.coverage" NAME="main Coverage Results" MODIFIED="1559743947599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cyrclic$fuzzy_test.coverage" NAME="fuzzy_test Coverage Results" MODIFIED="1559739537554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/accuracy.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="58" selection-start-column="58" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
+        <entry file="file://$PROJECT_DIR$/conf.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuzzy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wordSegmentation.py">
+        <entry file="file://$PROJECT_DIR$/model/charList.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/checkpoint">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <marker date="1560173180875" expanded="true" signature="4526:4592" ph="..." />
-                <marker date="1560173180875" expanded="true" signature="6670:6749" ph="..." />
-              </folding>
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-313451744/cv2/cv2/__init__.py">
+        <entry file="file://$PROJECT_DIR$/model/wordCharList.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="2239" column="4" selection-start-line="2239" selection-start-column="4" selection-end-line="2239" selection-end-column="4" />
+            <state>
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/core/arrayprint.py">
+        <entry file="file://$PROJECT_DIR$/data/corpus.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="245" selection-start-line="245" selection-end-line="245" />
+            <state relative-caret-position="-107250" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/core/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="160" selection-start-line="160" selection-end-line="160" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="228" column="50" selection-start-line="228" selection-start-column="50" selection-end-line="228" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -101,6 +345,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>eski u</find>
+      <find>are</find>
+      <find>putt</find>
+      <find>sort_res</find>
+      <find>ratio</find>
     </findStrings>
     <replaceStrings>
       <replace>U</replace>
@@ -119,15 +367,29 @@
       <list>
         <option value="$PROJECT_DIR$/fuzzy_test.py" />
         <option value="$PROJECT_DIR$/fuzzy.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/conf.ini" />
-        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/common.py" />
         <option value="$PROJECT_DIR$/crop_morphology.py" />
         <option value="$PROJECT_DIR$/trace.txt" />
-        <option value="$PROJECT_DIR$/wordSegmentation.py" />
+        <option value="$PROJECT_DIR$/pdm.py" />
+        <option value="C:/ProgramData/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py" />
+        <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/NN_src/DataLoader_orig.py" />
+        <option value="$PROJECT_DIR$/NN_src/main.py" />
+        <option value="$PROJECT_DIR$/ocr.py" />
+        <option value="$PROJECT_DIR$/ocr/helpers.py" />
+        <option value="$PROJECT_DIR$/ocr/page.py" />
+        <option value="$USER_HOME$/Desktop/handwriting-ocr-master/src/ocr/page.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/NN_src/Model.py" />
+        <option value="$PROJECT_DIR$/ocr/normalization.py" />
+        <option value="$PROJECT_DIR$/ocr/words.py" />
+        <option value="$PROJECT_DIR$/wordSegmentation.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/data/generate_image.py" />
+        <option value="$PROJECT_DIR$/data/words_gen.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -143,6 +405,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,25 +413,22 @@
               <item name="cyrclic" type="b2602c69:ProjectViewProjectNode" />
               <item name="cyrclic" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cyrclic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../faster-rcnn-graphics" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Ozodbek\cyrclic\model" />
       <recent name="C:\Ozodbek\cyrclic" />
     </key>
   </component>
@@ -185,7 +445,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="crop_morphology" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="generate_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cyrclic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -193,12 +453,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crop_morphology.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/generate_image.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -207,7 +467,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="fuzzy_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cyrclic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -215,13 +475,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fuzzy_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/generator.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cyrclic" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NN_src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NN_src/main.py" />
+      <option name="PARAMETERS" value="--train" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -273,42 +555,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cyrclic" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.fuzzy_test" />
-      <item itemvalue="Python.train" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.crop_morphology" />
+      <item itemvalue="Python.generate_image" />
+      <item itemvalue="Python.generator" />
+      <item itemvalue="Python.main (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.generator" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.crop_morphology" />
-        <item itemvalue="Python.train" />
-        <item itemvalue="Python.fuzzy_test" />
+        <item itemvalue="Python.generate_image" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +584,18 @@
       <updated>1559719759396</updated>
       <workItem from="1559899071890" duration="14442000" />
       <workItem from="1559914340995" duration="403000" />
-      <workItem from="1560163069893" duration="9934000" />
+      <workItem from="1560163069893" duration="10179000" />
+      <workItem from="1560337920416" duration="4539000" />
+      <workItem from="1560346726433" duration="192000" />
+      <workItem from="1560503115444" duration="8196000" />
+      <workItem from="1560767294989" duration="5024000" />
+      <workItem from="1561030265623" duration="2748000" />
+      <workItem from="1561375070638" duration="2307000" />
+      <workItem from="1561543213241" duration="3004000" />
+      <workItem from="1561713603748" duration="8854000" />
+      <workItem from="1562054529145" duration="20775000" />
+      <workItem from="1562241977623" duration="3370000" />
+      <workItem from="1562315110244" duration="9612000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1559899536563</created>
@@ -389,11 +660,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559914081896</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="process">
+      <created>1560174133949</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560174133949</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24779000" />
+    <option name="totallyTimeSpent" value="93645000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -406,14 +684,39 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23880596" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09115139" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4985507" weight="0.32921174" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49565217" visible="true" weight="0.25568798" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4985507" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49520257" visible="true" weight="0.18093175" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978678" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50479746" side_tool="true" weight="0.55146265" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4978678" weight="0.32936078" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.33208954" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09008529" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4985507" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49565217" visible="true" weight="0.3618635" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -428,30 +731,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24040511" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4985507" weight="0.32921174" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49565217" visible="true" weight="0.25568798" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" weight="0.3997833" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978678" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5043478" side_tool="true" weight="0.36476043" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4978678" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32936078" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout-to-restore>
   </component>
@@ -473,233 +752,338 @@
     <MESSAGE value="add knn" />
     <MESSAGE value="add train" />
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="process" />
+    <MESSAGE value="line" />
+    <option name="LAST_COMMIT_MESSAGE" value="line" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/wordSegmentation.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cyrclic$crop_morphology.coverage" NAME="crop_morphology Coverage Results" MODIFIED="1560170585666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/cyrclic$train.coverage" NAME="train Coverage Results" MODIFIED="1559912164831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cyrclic$test.coverage" NAME="test Coverage Results" MODIFIED="1560173459735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/cyrclic$main.coverage" NAME="main Coverage Results" MODIFIED="1560173829649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cyrclic$generate_image.coverage" NAME="generate_image Coverage Results" MODIFIED="1561726183817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/cyrclic$generator.coverage" NAME="generator Coverage Results" MODIFIED="1562325624905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/cyrclic$test.coverage" NAME="test Coverage Results" MODIFIED="1562071134495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cyrclic$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1562326397700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NN_src" />
+    <SUITE FILE_PATH="coverage/cyrclic$main.coverage" NAME="main Coverage Results" MODIFIED="1562329447949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://F:/Word_rec/main.py" />
-    <entry file="file://$PROJECT_DIR$/Image Result 5.jpg" />
-    <entry file="file://$PROJECT_DIR$/Image Result.jpg" />
-    <entry file="file://$PROJECT_DIR$/fuzzy_test.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/PIL/Image.py">
+    <entry file="file://$PROJECT_DIR$/NN_src/DataLoader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="2350" selection-start-line="2350" selection-end-line="2350" />
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prep2.jpg" />
-    <entry file="file://$PROJECT_DIR$/tmp/prep.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/segmented.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuzzy.py">
+    <entry file="file://$PROJECT_DIR$/NN_src/DataLoader_colab.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_src/SamplePreprocessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/sort.py" />
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/imutils/contours.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tmp_font.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-313451744/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="4212" column="8" selection-start-line="4212" selection-start-column="8" selection-end-line="4212" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr.py" />
+    <entry file="file://$PROJECT_DIR$/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/handwriting-ocr-master/src/ocr/page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6953">
+          <caret line="411" column="14" selection-start-line="411" selection-start-column="14" selection-end-line="411" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr/page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/13.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/12.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/10.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/9.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf.ini">
+    <entry file="file://$PROJECT_DIR$/../faster-rcnn-graphics/download_datasets.BAT">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cyc1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://D:/AOLPDR-master/character_knn.py" />
-    <entry file="file://D:/AOLPDR-master/character_segmentation.py" />
-    <entry file="file://$PROJECT_DIR$/cyc2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://D:/AOLPDR-master/character_recognition.py" />
-    <entry file="file://$PROJECT_DIR$/flattenedImageFeatures.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classifications.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/117.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-313451744/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="5186" column="41" selection-start-line="5186" selection-start-column="33" selection-end-line="5186" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/skimage/segmentation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/scipy/fftpack/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="228" column="50" selection-start-line="228" selection-start-column="50" selection-end-line="228" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/110.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/113.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/149.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/172.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Windows/Temp/Rar$DRa0.328/OCR_Caffe-master/Segmentation.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/core/arrayprint.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="245" selection-start-line="245" selection-end-line="245" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/histogram.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res_segment.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trace.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crop_morphology.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="87" column="27" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-313451744/cv2/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="2239" column="4" selection-start-line="2239" selection-start-column="4" selection-end-line="2239" selection-end-column="4" />
+        <state relative-caret-position="44863">
+          <caret line="2654" column="23" selection-start-line="2654" selection-start-column="23" selection-end-line="2654" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr/normalization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="151" column="35" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_src/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr/tfhelpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-313451744/numpy/core/_multiarray_umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-271">
+          <caret line="9334" column="8" selection-start-line="9334" selection-start-column="8" selection-end-line="9334" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="24" selection-start-line="24" selection-end-line="27" />
+          <folding>
+            <element signature="e#3#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocr/words.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wordSegmentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        <state relative-caret-position="-432">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1560173180875" expanded="true" signature="4526:4592" ph="..." />
-            <marker date="1560173180875" expanded="true" signature="6670:6749" ph="..." />
+            <marker date="1562324750437" expanded="true" signature="5475:5541" ph="..." />
+            <marker date="1562324750437" expanded="true" signature="7619:7698" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-7.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/generate_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="160" selection-start-line="160" selection-end-line="160" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/0.png">
+    <entry file="file://$PROJECT_DIR$/data/generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/b.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/2.png">
+    <entry file="file://$PROJECT_DIR$/data/my_words.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-33120.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/5.png">
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-33118.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/11.png">
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-31614.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-31569.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-31564.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-31554.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-31578.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words/sub/sub-sub/sub-sub-31552.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/my_words_`.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1959910">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/words_gen.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="115316" column="41" selection-start-line="115316" selection-start-column="41" selection-end-line="115316" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+        <state relative-caret-position="231">
+          <caret line="430" column="20" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NN_src/DataLoader_orig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/accuracy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/charList.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/checkpoint">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/wordCharList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/corpus.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107250" />
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/core/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzzy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
